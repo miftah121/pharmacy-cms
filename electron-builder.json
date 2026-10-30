@@ -1,0 +1,50 @@
+{
+    "appId": "com.pharmaflow.ims",
+    "productName": "PharmaFlow IMS",
+    "directories": {
+        "output": "dist-electron",
+        "buildResources": "build"
+    },
+    "files": [
+        "dist/**/*",
+        "electron.cjs",
+        "preload.cjs",
+        "package.json"
+    ],
+    "win": {
+        "target": [
+            {
+                "target": "nsis",
+                "arch": [
+                    "x64"
+                ]
+            }
+        ],
+        "icon": "build/icon.ico",
+        "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "nsis": {
+        "oneClick": false,
+        "allowToChangeInstallationDirectory": true,
+        "createDesktopShortcut": true,
+        "createStartMenuShortcut": true,
+        "shortcutName": "PharmaFlow IMS",
+        "runAfterFinish": true,
+        "deleteAppDataOnUninstall": false,
+        "include": "installer.nsh"
+    },
+    "mac": {
+        "target": [
+            "dmg"
+        ],
+        "icon": "build/icon.icns",
+        "category": "public.app-category.business"
+    },
+    "linux": {
+        "target": [
+            "AppImage"
+        ],
+        "icon": "build/icon.png",
+        "category": "Office"
+    }
+}

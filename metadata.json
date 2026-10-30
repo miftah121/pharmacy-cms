@@ -1,0 +1,5 @@
+{
+  "name": "PharmaFlow IMS",
+  "description": "A sales and inventory management system tailored for medicine distributors in Pakistan. Track sales by medical reps, manage pharmacy orders, and generate detailed stock and performance reports.",
+  "requestFramePermissions": []
+}
